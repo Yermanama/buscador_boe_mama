@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import sleep
+from .escribir_txt import append_texto
+
 
 def BOPGranada(nombre_archivo):
     driver = webdriver.Chrome()
@@ -10,11 +11,7 @@ def BOPGranada(nombre_archivo):
     boletin = driver.find_element(by=By.ID, value = 'cabeceraListado').find_element(by=By.TAG_NAME, value = 'h2').text
     enlacePDF = driver.find_element(by=By.ID, value = 'cabeceraListado').find_element(by=By.TAG_NAME, value = 'a').get_attribute('href')
     
-    with open(nombre_archivo, 'a', encoding='utf-8') as archivo:
-        archivo.write('BOLETIN PROVINCIAL GRANADA'.center(100, '-'))
-        archivo.write(f'Fecha Boletin->{boletin}\nEnlace de boletin -> {enlacePDF}\n')
-        archivo.write('\n\n\n')
-
+    append_texto(nombre_archivo = nombre_archivo, nombre_boletin_may='BOLETIN DE GRANADA', enlace=enlacePDF, texto=boletin)
 
 
 if __name__ == "__main__":

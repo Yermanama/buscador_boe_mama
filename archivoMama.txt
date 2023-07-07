@@ -70,6 +70,8 @@ Enlace al boletín:https://boe.es/buscar/doc.php?id=BOE-A-2023-9872
 
 
 ----------------------------------------INFORMACIÓN DEL BOJA----------------------------------------
+
+
 Texto del boletín: Acuerdo de 9 de marzo de 2023, de la Sociedad Andaluza para el Desarrollo de las Telecomunicaciones, S.A., por el que se anuncia convocatoria pública para la cobertura del puesto de Ingeniero/a de Telecomunicaciones de la Red Corporativa de la Junta de Andalucía en el Departamento de Telecomunicaciones y Centros de Gestión.
 Organismo: Empresas Públicas y Asimiladas  (Boletín número 50 de 15/03/2023   Sección: Autoridades y personal)
 Enlace al boletín: http://www.juntadeandalucia.es/boja/2023/50/41
@@ -140,8 +142,15 @@ Enlace al boletín: http://www.juntadeandalucia.es/boja/2022/111/15
 
 
 
--------------------------------------BOLETIN PROVINCIAL GRANADA-------------------------------------Fecha Boletin->Boletin del 07/07/2023 Descargar PDF
-Enlace de boletin -> https://bop2.dipgra.es/opencms/opencms/portal/DescargaPDFBoletin?fecha=07/07/2023
+-----------------------------------------BOLETIN DE GRANADA-----------------------------------------Fecha del boletín: No he conseguido la fecha
+Enlace al boletín : https://bop2.dipgra.es/opencms/opencms/portal/DescargaPDFBoletin?fecha=07/07/2023
+Texto del boletín: Boletin del 07/07/2023 Descargar PDF
+
+
+
+------------------------------------------BOLETIN DE CADIZ------------------------------------------Fecha del boletín: Viernes 11 Febrero 2022
+Enlace al boletín : https://www.bopcadiz.es/boletin/Boletin-numero-029-del-ano-2022
+Texto del boletín: El Alambique. . 9.332.- Ayuntamiento de La Línea de la Concepción. Nombra-miento de Eusebio Pereira Rodríguez para ocupar la plaza de TAE Ingeniero de Caminos, Canales y Puertos. 9.355.- Ayuntamiento de Bornos. Aprobación de las bases para la
 
 
 
