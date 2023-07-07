@@ -1,3 +1,5 @@
-import modules.AndaluciaBOJA as AndaluciaBOJA
+import modules.AndaluciaBOJA as BOJA
+import modules.BOE as BOE
 
-AndaluciaBOJA.buscar_BOJA()
+BOE.buscar_BOE()
+BOJA.buscar_BOJA()

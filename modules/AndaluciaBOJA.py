@@ -58,10 +58,11 @@ def buscar_BOJA():
     # Junto las dos listas, por su índice, a ver si coinciden, que se supone que si
     lista_combinada = list(zip(textos_anuncios, enlaces))
 
-    with open('enlacesBOJA.txt', 'a',encoding='utf-8') as archivo:
-        archivo.write('INFORMACIÓN DEL BOJA'.center(50,'-') + '\n')
+    with open('archivoMama.txt', 'a',encoding='utf-8') as archivo:
+        archivo.write('INFORMACIÓN DEL BOJA'.center(100,'-') + '\n')
         for elemento in lista_combinada:
             archivo.write(f'''Texto del boletín: {elemento[0]}\nEnlace al boletín: {elemento[1]}\n\n''')
+            archivo.write('\n\n\n')
 
 if __name__ == "__main__":
     buscar_BOJA()
