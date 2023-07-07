@@ -1,9 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-from time import sleep
 
-def buscar_BOE():
+
+def buscar_BOE(nombre_archivo):
         
     # Primero vamos a iniciar sesión
     driver = webdriver.Chrome()
@@ -34,11 +34,9 @@ def buscar_BOE():
 
 
     # Lo pasamos al documento txt
-    with open('archivoMama.txt', 'w',encoding='utf-8') as archivo:
+    with open(nombre_archivo, 'w',encoding='utf-8') as archivo:
             archivo.write('INFORMACIÓN DEL BOE'.center(100,'-') + '\n')
             for elemento in lista_informacion:
                 archivo.write(f'''Boletín de donde procede: {elemento[0]}\nTexto del boletín: {elemento[1]}\nEnlace al boletín:{elemento[2]}\n\n''')
                 archivo.write('\n\n\n')
 
-if __name__ == "__main__":
-     buscar_BOE()

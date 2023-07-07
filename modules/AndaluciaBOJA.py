@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-def buscar_BOJA():
+def buscar_BOJA(nombre_archivo):
     # Iniciamos sesión
     driver = webdriver.Chrome()
 
@@ -58,11 +58,10 @@ def buscar_BOJA():
     # Junto las dos listas, por su índice, a ver si coinciden, que se supone que si
     lista_combinada = list(zip(textos_anuncios, enlaces))
 
-    with open('archivoMama.txt', 'a',encoding='utf-8') as archivo:
+    with open(nombre_archivo, 'a',encoding='utf-8') as archivo:
         archivo.write('INFORMACIÓN DEL BOJA'.center(100,'-') + '\n')
+        archivo.write('\n\n')
         for elemento in lista_combinada:
             archivo.write(f'''Texto del boletín: {elemento[0]}\nEnlace al boletín: {elemento[1]}\n\n''')
             archivo.write('\n\n\n')
 
-if __name__ == "__main__":
-    buscar_BOJA()
