@@ -11,6 +11,7 @@ def append_texto(
         archivo.write(f"Fecha del boletín: {fecha}\n")
         archivo.write(f"Enlace al boletín : {enlace}\n")
         archivo.write(f"Texto del boletín: {texto}\n")
+        archivo.write('-' * 100)  # Adding a separator line for better readability
         archivo.write('\n\n\n')
 
 if __name__ == "__main__":
