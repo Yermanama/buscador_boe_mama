@@ -33,6 +33,6 @@ def buscar_cadiz(driver, nombre_archivo):
         print(f'Ha habido un error del tipo {error} en el archivo {nombre_ejecutado}')
 
 
-
 if __name__ == '__main__':
+
     buscar_cadiz(driver=webdriver.Chrome(), nombre_archivo='pruebaCadiz.txt')

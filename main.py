@@ -7,6 +7,7 @@ from modules.Almeria import buscar_almeria
 from modules.AndaluciaBOJA import buscarBOJA
 from modules.BOE import buscar_BOE
 from modules.Cadiz import buscar_cadiz
+from modules.Cordoba import buscar_cordoba
 from modules.Granada import BOPGranada
 
 
@@ -24,9 +25,10 @@ def main():
 
     buscar_BOE(driver, nombre_archivo)
     buscarBOJA(driver, nombre_archivo)
-    buscar_cadiz(driver, nombre_archivo)
-    BOPGranada(driver, nombre_archivo)
     buscar_almeria(driver, nombre_archivo)
+    buscar_cadiz(driver, nombre_archivo)
+    buscar_cordoba(driver, nombre_archivo)
+    BOPGranada(driver, nombre_archivo)
 
     driver.quit()
 
