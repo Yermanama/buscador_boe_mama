@@ -32,7 +32,6 @@ def buscar_cordoba(driver: webdriver, nombre_archivo):
         append_texto(nombre_archivo=nombre_archivo, enlace=enlace, fecha=fecha, texto=titulo_boletin,
                      nombre_boletin_may='BOLETIN DE CORDOBA')
 
-
     except Exception as error:
         print(f'Hay un error del tipo {error} en el archivo {archivo_ejecutado}')
         traceback.print_exc()

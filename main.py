@@ -9,17 +9,19 @@ from modules.BOE import buscar_BOE
 from modules.Cadiz import buscar_cadiz
 from modules.Cordoba import buscar_cordoba
 from modules.Granada import BOPGranada
+from modules.Jaen import buscar_jaen
+from modules.Malaga import buscar_malaga
 
 
 def main():
     # Setup chrome options
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-usb-keyboard-detect")  # Add this line
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # chrome_options.add_argument("--disable-usb-keyboard-detect")  # Add this line
 
     # Set the driver
-    webdriver_service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
+    # webdriver_service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome()
 
     nombre_archivo = 'boletines.txt'
 
@@ -29,6 +31,8 @@ def main():
     buscar_cadiz(driver, nombre_archivo)
     buscar_cordoba(driver, nombre_archivo)
     BOPGranada(driver, nombre_archivo)
+    buscar_jaen(driver, nombre_archivo)
+    buscar_malaga(driver, nombre_archivo)
 
     driver.quit()
 
