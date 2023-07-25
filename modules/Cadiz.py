@@ -5,10 +5,10 @@ from .escribir_txt import append_texto
 nombre_ejecutado = os.path.basename(__file__)
 
 
-def buscar_cadiz(driver, nombre_archivo):
+def buscar_cadiz(driver, nombre_archivo, parametro_busqueda):
     try:
         driver.get('https://www.bopcadiz.es/boletin/')
-        driver.find_element(by=By.ID, value='texto').send_keys('ingeniero de caminos')
+        driver.find_element(by=By.ID, value='texto').send_keys(parametro_busqueda)
         driver.find_element(by=By.CSS_SELECTOR, value='div.field.inputField').click()
         driver.implicitly_wait(15)
         contenido = driver.find_element(by=By.CSS_SELECTOR, value='div.listWEntry.noticiaEntry').find_elements(

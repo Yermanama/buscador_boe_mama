@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from modules.A_coruña import buscar_coruña
 from modules.Almeria import buscar_almeria
 from modules.AndaluciaBOJA import buscarBOJA
 from modules.BOE import buscar_BOE
@@ -12,8 +13,11 @@ from modules.Granada import BOPGranada
 from modules.Jaen import buscar_jaen
 from modules.Malaga import buscar_malaga
 
+import datetime
 
-def main():
+
+
+def main(parametro_busqueda):
     # Setup chrome options
     # chrome_options = Options()
     # chrome_options.add_argument("--headless")
@@ -23,19 +27,18 @@ def main():
     # webdriver_service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome()
 
-    nombre_archivo = 'boletines.txt'
+    fecha_hoy = datetime.date.today()
+    nombre_archivo = f"{fecha_hoy}-boletines.txt"
 
-    buscar_BOE(driver, nombre_archivo)
-    buscarBOJA(driver, nombre_archivo)
-    buscar_almeria(driver, nombre_archivo)
-    buscar_cadiz(driver, nombre_archivo)
-    buscar_cordoba(driver, nombre_archivo)
-    BOPGranada(driver, nombre_archivo)
-    buscar_jaen(driver, nombre_archivo)
-    buscar_malaga(driver, nombre_archivo)
+    buscar_BOE(driver, nombre_archivo, parametro_busqueda)
+    buscarBOJA(driver, nombre_archivo, parametro_busqueda)
+    buscar_coruña(driver, nombre_archivo, parametro_busqueda)
+    buscar_almeria(driver, nombre_archivo, parametro_busqueda )
+    buscar_cadiz(driver, nombre_archivo, parametro_busqueda)
+    buscar_cordoba(driver, nombre_archivo, parametro_busqueda)
+    BOPGranada(driver, nombre_archivo, parametro_busqueda)
+    buscar_jaen(driver, nombre_archivo, parametro_busqueda)
+    buscar_malaga(driver, nombre_archivo, parametro_busqueda)
 
     driver.quit()
 
-
-if __name__ == "__main__":
-    main()

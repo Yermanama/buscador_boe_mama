@@ -14,12 +14,12 @@ fecha_hoy = fecha_hoy.strftime('%d-%m-%Y')
 fecha_hace_mes = fecha_hace_mes.strftime('%d-%m-%Y')
 
 
-def buscar_cordoba(driver: webdriver, nombre_archivo):
+def buscar_cordoba(driver: webdriver, nombre_archivo, parametro_busqueda):
     try:
         driver = driver
         driver.get('https://bop.dipucordoba.es/')
         driver.find_element(by=By.CLASS_NAME, value='link').find_element(by=By.TAG_NAME, value='a').click()
-        driver.find_element(by=By.ID, value='query').send_keys('ingeniero de caminos')
+        driver.find_element(by=By.ID, value='query').send_keys(parametro_busqueda)
         driver.find_element(by=By.ID, value='date_down').send_keys(fecha_hace_mes)
         driver.find_element(by=By.ID, value='date_up').send_keys(fecha_hoy)
         driver.find_element(by=By.ID, value='commit').click()

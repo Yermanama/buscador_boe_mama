@@ -8,14 +8,14 @@ from .escribir_txt import append_texto
 nombre_ejecutado = os.path.basename(__file__)
 
 
-def buscar_almeria(driver, nombre_archivo):
+def buscar_almeria(driver, nombre_archivo, parametro_busqueda):
     try:
         driver.get('https://www.dipalme.org/Servicios/cmsdipro/index.nsf/bop_view.xsp?p=dipalme')
         driver.find_element(by=By.CSS_SELECTOR,
                             value='button.registerbtn.rechazarbtn.cerrar_ventana_cookies_rechazar').click()
         driver.find_element(by=By.ID, value='search-button-bop-show').click()
         driver.implicitly_wait(5)
-        driver.find_element(by=By.ID, value='view:form_texto').send_keys('ingeniero de caminos')
+        driver.find_element(by=By.ID, value='view:form_texto').send_keys(parametro_busqueda)
         driver.find_element(by=By.ID, value='sf_submit').click()
         driver.implicitly_wait(10)
         driver.find_element(by=By.CSS_SELECTOR,

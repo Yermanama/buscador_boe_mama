@@ -7,11 +7,11 @@ from .escribir_txt import append_texto
 archivo_ejecutado = os.path.basename(__file__)
 
 
-def buscar_jaen(driver: webdriver, nombre_archivo):
+def buscar_jaen(driver: webdriver, nombre_archivo, parametro_busqueda):
     try:
         driver = driver
         driver.get('https://bop.dipujaen.es/busquedas')
-        driver.find_element(by=By.ID, value='txtEdicto').send_keys('ingeniero/a de caminos')
+        driver.find_element(by=By.ID, value='txtEdicto').send_keys(parametro_busqueda)
         driver.find_element(by=By.XPATH, value='//input[@aria-label="Buscar edictos"]').click()
         parrafo = driver.find_element(by=By.ID, value='resultados').find_element(by=By.TAG_NAME, value='p')
         enlace = parrafo.find_element(by=By.TAG_NAME, value='a').get_attribute('href')

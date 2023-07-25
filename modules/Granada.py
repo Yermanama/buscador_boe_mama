@@ -5,7 +5,6 @@ from .escribir_txt import append_texto
 
 nombre_ejecutado = os.path.basename(__file__)
 URL = 'https://bop2.dipgra.es/opencms/'
-SEARCH_KEYWORD = 'ingeniero de caminos'
 FILENAME = 'archivoMama.txt'
 
 
@@ -20,9 +19,9 @@ def get_pdf_link(driver):
         'href')
 
 
-def BOPGranada(driver, nombre_archivo):
+def BOPGranada(driver, nombre_archivo, parametro_busqueda):
     driver.get(URL)
-    driver.find_element(by=By.ID, value='textoLibre').send_keys(SEARCH_KEYWORD)
+    driver.find_element(by=By.ID, value='textoLibre').send_keys(parametro_busqueda)
     driver.find_element(by=By.CSS_SELECTOR, value='input.boton[value="BUSCAR"]').click()
 
     try:

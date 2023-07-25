@@ -1,16 +1,16 @@
-import tkinter as tk
+from tkinter import ttk
 
-class Entrada(tk.Tk):
+class Entrada(ttk.Entry):
 
     def __init__(self, parent):
-        super.__init__(parent, width=30, font=('Roboto', 12))
+        super().__init__(parent, width=30, font=('Roboto', 12))
 
 
-class Etiqueta(tk.Tk):
+class Etiqueta(ttk.Label):
     def __init__(self, parent):
         super().__init__(parent, text='Inserta criterio de búsqueda', font=('Roboto', 14))
         
 
-class Boton_busqueda(tk.Tk):
-    def __init__(self, parent, command):
-        super.__init__(parent, text='Buscar', command=command, width=20)
+class Boton_busqueda(ttk.Button):
+    def __init__(self, parent, command=None):
+        super().__init__(parent, text='Buscar', command=command, width=20)

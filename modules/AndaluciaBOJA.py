@@ -6,11 +6,11 @@ from .escribir_txt import append_texto
 
 nombre_ejecutado = os.path.basename(__file__)
 
-def buscarBOJA(driver, nombre_archivo):
+def buscarBOJA(driver, nombre_archivo, parametro_busqueda):
     try:
         driver.get('https://www.juntadeandalucia.es/eboja/buscador/')
         driver.implicitly_wait(5)
-        driver.find_element(by=By.ID, value='q').send_keys('ingeniero/a de caminos')
+        driver.find_element(by=By.ID, value='q').send_keys(parametro_busqueda)
         driver.implicitly_wait(5)
         driver.find_element(by=By.CLASS_NAME, value='pl-0').click()
         Select(driver.find_element(by=By.ID, value='ordenacion')).select_by_value('bojaDateNormalized')
