@@ -1,7 +1,6 @@
 import os
 from traceback import print_exc
 
-from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -11,7 +10,7 @@ archivo_ejecutado = os.path.basename(__file__)
 
 def buscar_alaba(driver: webdriver, nombre_archivo, parametro_busqueda):
     try:
-        driver = webdriver.Chrome()
+        driver = driver
         driver.get('https://www.araba.eus/botha/Busquedas/SGBO5016.aspx')
         driver.find_element(by=By.ID, value='tbAnuncio').send_keys(parametro_busqueda)
         driver.find_element(by=By.ID, value='btnBuscar').click()
@@ -34,4 +33,4 @@ def buscar_alaba(driver: webdriver, nombre_archivo, parametro_busqueda):
 
 
 if __name__ == "__main__":
-    buscar_alaba(webdriver.Chrome(), "prueba_malaga.txt", 'ingeniero/a de caminos')
+    buscar_alaba(webdriver.Chrome(), "prueba_alaba.txt", 'ingeniero/a de caminos')
