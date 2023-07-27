@@ -10,6 +10,7 @@ from modules.AndaluciaBOJA import buscarBOJA
 from modules.BOE import buscar_BOE
 from modules.Burgos import buscar_burgos
 from modules.Cadiz import buscar_cadiz
+from modules.Ciudad_Real import buscar_ciudad_real
 from modules.Cordoba import buscar_cordoba
 from modules.Granada import BOPGranada
 from modules.Jaen import buscar_jaen
@@ -39,6 +40,7 @@ def main(parametro_busqueda):
     buscar_alaba(driver, nombre_archivo, parametro_busqueda)
     buscar_burgos(driver, nombre_archivo, parametro_busqueda)
     buscar_cadiz(driver, nombre_archivo, parametro_busqueda)
+    buscar_ciudad_real(driver, nombre_archivo, parametro_busqueda)
     buscar_cordoba(driver, nombre_archivo, parametro_busqueda)
     BOPGranada(driver, nombre_archivo, parametro_busqueda)
     buscar_jaen(driver, nombre_archivo, parametro_busqueda)
